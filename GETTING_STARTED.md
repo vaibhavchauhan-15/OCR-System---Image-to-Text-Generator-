@@ -1,5 +1,7 @@
 # OCR System - Image to Text Generator
 
+> Repository: [https://github.com/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-](https://github.com/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-)
+
 ## Getting Started
 
 To run this project, follow these steps:

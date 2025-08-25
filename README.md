@@ -43,8 +43,8 @@
 ### 1. Clone the Repository
 ```bash
 # Get the code
-git clone https://github.com/yourusername/image-to-text-generator.git
-cd image-to-text-generator
+git clone https://github.com/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-.git
+cd OCR-System---Image-to-Text-Generator-
 ```
 
 ### 2. Backend Setup
