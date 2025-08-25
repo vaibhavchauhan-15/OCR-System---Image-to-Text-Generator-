@@ -16,10 +16,10 @@ const Header: React.FC = () => {
             <Link href="/" className="text-dark-300 hover:text-white transition-colors">
               Home
             </Link>
-            <Link href="/#features" className="text-dark-300 hover:text-white transition-colors">
+            <Link href="/features" className="text-dark-300 hover:text-white transition-colors">
               Features
             </Link>
-            <Link href="/#about" className="text-dark-300 hover:text-white transition-colors">
+            <Link href="/about" className="text-dark-300 hover:text-white transition-colors">
               About
             </Link>
           </nav>

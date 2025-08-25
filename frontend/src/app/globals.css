@@ -30,6 +30,14 @@ body {
   .btn-secondary {
     @apply bg-dark-700 text-white hover:bg-dark-600;
   }
+
+  .btn-outline {
+    @apply border border-primary-600 text-primary-600 hover:bg-primary-600/10;
+  }
+  
+  .btn-lg {
+    @apply px-6 py-3 text-lg;
+  }
   
   .card {
     @apply bg-dark-800 border border-dark-700 rounded-lg shadow-lg overflow-hidden;
@@ -37,5 +45,13 @@ body {
   
   .input {
     @apply bg-dark-700 border-dark-600 text-white rounded-md focus:ring-primary-500 focus:border-primary-500;
+  }
+
+  .shadow-glow {
+    @apply shadow-[0_0_15px_rgba(14,165,233,0.3)];
+  }
+
+  .prose-dark {
+    @apply prose-invert prose-headings:text-white prose-a:text-primary-400 hover:prose-a:text-primary-300 prose-p:text-dark-300;
   }
 }

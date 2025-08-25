@@ -374,6 +374,40 @@ export default function Home() {
         </div>
       </div>
       
+      {/* Learn More Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text">Discover More</h2>
+          <p className="text-dark-300 max-w-2xl mx-auto">
+            Learn about our advanced features and the developer behind this project
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-dark-900 border border-dark-800 rounded-lg p-8 transition-all duration-300 hover:border-primary-500 hover:shadow-glow">
+            <h3 className="text-xl font-bold mb-3">Powerful Features</h3>
+            <p className="text-dark-300 mb-6">
+              Explore the advanced OCR capabilities that make our system stand out,
+              including image enhancement, multi-language support, and structured data extraction.
+            </p>
+            <a href="/features" className="btn btn-primary">
+              View Features
+            </a>
+          </div>
+          
+          <div className="bg-dark-900 border border-dark-800 rounded-lg p-8 transition-all duration-300 hover:border-primary-500 hover:shadow-glow">
+            <h3 className="text-xl font-bold mb-3">About the Developer</h3>
+            <p className="text-dark-300 mb-6">
+              Learn more about Vaibhav Chauhan, the Full-Stack Developer, Data Analyst, and Open Source Contributor
+              behind this OCR system.
+            </p>
+            <a href="/about" className="btn btn-primary">
+              Meet the Developer
+            </a>
+          </div>
+        </div>
+      </div>
+      
       <Footer />
     </main>
   );

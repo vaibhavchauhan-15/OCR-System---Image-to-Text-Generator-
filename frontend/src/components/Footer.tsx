@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiGithub } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
@@ -10,6 +11,17 @@ const Footer: React.FC = () => {
             <p className="text-dark-400 text-sm">
               © {new Date().getFullYear()} OCR System. All rights reserved.
             </p>
+            <div className="flex space-x-4 mt-2">
+              <Link href="/" className="text-dark-400 hover:text-white transition-colors text-sm">
+                Home
+              </Link>
+              <Link href="/features" className="text-dark-400 hover:text-white transition-colors text-sm">
+                Features
+              </Link>
+              <Link href="/about" className="text-dark-400 hover:text-white transition-colors text-sm">
+                About
+              </Link>
+            </div>
           </div>
           <div className="flex space-x-6">
             <a
@@ -17,8 +29,34 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark-400 hover:text-white transition-colors"
+              aria-label="GitHub"
             >
               <FiGithub className="h-5 w-5" />
+            </a>
+            <a
+              href="https://linkedin.com/in/vaibhavchauhan15"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-400 hover:text-white transition-colors"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin className="h-5 w-5" />
+            </a>
+            <a
+              href="https://twitter.com/vaibhavchauhan15"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-400 hover:text-white transition-colors"
+              aria-label="Twitter"
+            >
+              <FiTwitter className="h-5 w-5" />
+            </a>
+            <a
+              href="mailto:vaibhavchauhan12353@gmail.com"
+              className="text-dark-400 hover:text-white transition-colors"
+              aria-label="Email"
+            >
+              <FiMail className="h-5 w-5" />
             </a>
           </div>
         </div>
