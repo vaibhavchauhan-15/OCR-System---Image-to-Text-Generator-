@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex space-x-6">
             <a
-              href="https://github.com/yourusername/ocr-system"
+              href="https://github.com/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-"
               target="_blank"
               rel="noopener noreferrer"
               className="text-dark-400 hover:text-white transition-colors"

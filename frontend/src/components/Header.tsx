@@ -26,7 +26,7 @@ const Header: React.FC = () => {
           
           <div>
             <a
-              href="https://github.com/yourusername/ocr-system"
+              href="https://github.com/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
