@@ -1,14 +1,22 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { FiGithub, FiLinkedin, FiMail, FiGlobe, FiTwitter, FiInstagram } from 'react-icons/fi';
 
+// Add metadata export for better SEO
+export const metadata = {
+  title: 'About | OCR System - Image to Text Generator',
+  description: 'Learn about the developer behind the OCR system and other projects',
+};
+
+// Mark the page as static with no data revalidation needed
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 const AboutPage = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-dark-950 text-white">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-dark-950 text-gray-900 dark:text-white">
       <Header />
       <main className="flex-grow">
         <section className="py-12 md:py-20">
@@ -17,14 +25,14 @@ const AboutPage = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text">
                 About The Developer
               </h1>
-              <p className="text-xl text-dark-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 dark:text-dark-300 max-w-3xl mx-auto">
                 Learn more about the creator behind this OCR system
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
               <div className="lg:col-span-2">
-                <div className="bg-dark-900 border border-dark-800 rounded-lg p-8 sticky top-8">
+                <div className="bg-gray-100 dark:bg-dark-900 border border-gray-200 dark:border-dark-800 rounded-lg p-8 sticky top-8">
                   <div className="flex flex-col items-center text-center mb-6">
                     <div className="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-primary-500">
                       <Image 
@@ -33,18 +41,19 @@ const AboutPage = () => {
                         fill
                         className="object-cover"
                         priority
+                        loading="eager"
                       />
                     </div>
                     <h2 className="text-2xl font-bold">Vaibhav Chauhan</h2>
                     <p className="text-primary-400 mb-2">Full-Stack Developer | Data Analyst | Open Source Contributor</p>
-                    <p className="text-dark-300 text-sm mb-4">Vadodara, Gujarat, India 🇮🇳</p>
+                    <p className="text-gray-500 dark:text-dark-300 text-sm mb-4">Vadodara, Gujarat, India 🇮🇳</p>
                     
                     <div className="flex space-x-4 mb-6">
                       <a 
                         href="https://github.com/vaibhavchauhan-15" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-dark-300 hover:text-white transition-colors"
+                        className="text-gray-500 dark:text-dark-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                         aria-label="GitHub"
                       >
                         <FiGithub className="h-6 w-6" />
@@ -53,14 +62,14 @@ const AboutPage = () => {
                         href="https://linkedin.com/in/vaibhavchauhan15" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-dark-300 hover:text-white transition-colors"
+                        className="text-gray-500 dark:text-dark-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                         aria-label="LinkedIn"
                       >
                         <FiLinkedin className="h-6 w-6" />
                       </a>
                       <a 
                         href="mailto:vaibhavchauhan12353@gmail.com" 
-                        className="text-dark-300 hover:text-white transition-colors"
+                        className="text-gray-500 dark:text-dark-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                         aria-label="Email"
                       >
                         <FiMail className="h-6 w-6" />
@@ -69,7 +78,7 @@ const AboutPage = () => {
                         href="https://www.vaibhavchauhan.tech" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-dark-300 hover:text-white transition-colors"
+                        className="text-gray-500 dark:text-dark-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                         aria-label="Portfolio"
                       >
                         <FiGlobe className="h-6 w-6" />
@@ -86,13 +95,13 @@ const AboutPage = () => {
                     </a>
                   </div>
                   
-                  <div className="border-t border-dark-800 pt-6">
+                  <div className="border-t border-gray-200 dark:border-dark-800 pt-6">
                     <h3 className="text-lg font-semibold mb-4">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
                       {['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'MongoDB', 'Express', 'Next.js', 'TailwindCSS', 'Docker'].map((tech, index) => (
                         <span 
                           key={index} 
-                          className="px-3 py-1 bg-dark-800 rounded-full text-xs font-medium text-dark-300"
+                          className="px-3 py-1 bg-gray-200 dark:bg-dark-800 rounded-full text-xs font-medium text-gray-700 dark:text-dark-300"
                         >
                           {tech}
                         </span>

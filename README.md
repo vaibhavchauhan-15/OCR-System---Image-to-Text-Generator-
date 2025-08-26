@@ -1,133 +1,311 @@
-# 🔍 OCR System - Image to Text Generator ✨
+# 🔍 Image to Text Generator
 
 <div align="center">
+  <img src="frontend/public/image.png" alt="OCR System Logo" width="200"/>
+  <br/>
+  <p><i>Transform any image into editable and searchable text with advanced OCR technology</i></p>
+  <br/>
 
-![OCR System Demo](./frontend/public/image.png)
-
+  [![Next.js](https://img.shields.io/badge/Next.js-13.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+  [![FastAPI](https://img.shields.io/badge/FastAPI-Latest-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+  [![PaddleOCR](https://img.shields.io/badge/PaddleOCR-Latest-06AED5?style=for-the-badge&logo=paddle&logoColor=white)](https://github.com/PaddlePaddle/PaddleOCR)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 </div>
 
-> ✨ An AI-powered OCR system that extracts text from images with high accuracy, supporting documents, receipts, number plates, invoices, and more.
+<hr />
+
+## 📋 Table of Contents
+- [Overview](#-overview)
+- [Features](#-features)
+- [Technology Stack](#-technology-stack)
+- [Screenshots](#-screenshots)
+- [Getting Started](#-getting-started)
+- [Project Structure](#-project-structure)
+- [API Endpoints](#-api-endpoints)
+- [Configuration](#-configuration)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+<hr />
+
+## 🚀 Overview
+
+<div align="center">
+  <img src="frontend/public/screenshot/Home.png" alt="Home Page" width="800"/>
+</div>
+
+**Image to Text Generator** is a powerful OCR (Optical Character Recognition) system that extracts text from images with high accuracy. Whether you need to digitize documents, extract text from screenshots, or make images searchable, this application provides a user-friendly interface with advanced features.
+
+The system combines a modern Next.js frontend with a robust FastAPI backend, utilizing PaddleOCR's state-of-the-art recognition capabilities to deliver excellent results across multiple languages and image types.
+
+<hr />
 
 ## ✨ Features
 
 <div align="center">
-
-| 🚀 Feature | 📝 Description |
-| :--- | :--- |
-| 🔍 **High Accuracy OCR** | Google Vision OCR API + PaddleOCR fallback |
-| 🌎 **Multi-Language Support** | 100+ languages (English, Hindi, etc.) |
-| 🖼️ **Document Preprocessing** | Noise removal, deskew, binarization using OpenCV |
-| 📚 **Batch Processing** | Handle multiple files at once |
-| ✏️ **Handwriting Recognition** | Google Vision API support |
-| 📋 **Structured Output** | JSON (useful for invoices, receipts, forms) |
-| 📱 **Real-time OCR** | Option for live camera OCR |
-| 📄 **Searchable PDFs** | Convert scanned PDFs to text-based PDFs |
-
+  <img src="frontend/public/screenshot/Features.png" alt="Features Page" width="800"/>
 </div>
 
-## 🛠️ Tech Stack
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🖼️ Image Processing</h3>
+      <ul>
+        <li>Support for various image formats (PNG, JPG, JPEG, GIF, BMP, WEBP)</li>
+        <li>Automatic image enhancement and preprocessing</li>
+        <li>Deskewing and noise reduction</li>
+        <li>10MB file size support</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>📝 Text Extraction</h3>
+      <ul>
+        <li>High-accuracy text recognition</li>
+        <li>Multi-language support</li>
+        <li>Confidence score for extraction quality</li>
+        <li>Word count and processing statistics</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔄 Data Processing</h3>
+      <ul>
+        <li>Structured data extraction (key-value pairs)</li>
+        <li>Copy to clipboard functionality</li>
+        <li>Download results as TXT file</li>
+        <li>JSON data format option</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>🛠️ Advanced Options</h3>
+      <ul>
+        <li>Language selection</li>
+        <li>Toggle image enhancement</li>
+        <li>Structured output formatting</li>
+        <li>Real-time processing feedback</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<hr />
+
+## 💻 Technology Stack
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>Frontend</h3>
+      <ul>
+        <li>Next.js 13 with App Router</li>
+        <li>TypeScript</li>
+        <li>TailwindCSS</li>
+        <li>React Dropzone</li>
+        <li>Axios</li>
+        <li>React Icons</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>Backend</h3>
+      <ul>
+        <li>FastAPI</li>
+        <li>PaddleOCR</li>
+        <li>OpenCV</li>
+        <li>NumPy</li>
+        <li>Pillow (PIL)</li>
+        <li>Uvicorn</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>Deployment</h3>
+      <ul>
+        <li>Docker</li>
+        <li>Docker Compose</li>
+        <li>CORS Middleware</li>
+        <li>Environment Configuration</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h3>Development Tools</h3>
+      <ul>
+        <li>ESLint</li>
+        <li>TypeScript</li>
+        <li>Tailwind Forms & Typography</li>
+        <li>Next Themes (dark mode support)</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<hr />
+
+## 📸 Screenshots
 
 <div align="center">
-
-| 🔧 Component | 💻 Technologies |
-| :--- | :--- |
-| **Backend** | ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-REST_API-green?style=for-the-badge&logo=fastapi&logoColor=white) ![PaddleOCR](https://img.shields.io/badge/PaddleOCR-Engine-orange?style=for-the-badge) ![Google Cloud Vision](https://img.shields.io/badge/Google_Cloud-Vision_API-blue?style=for-the-badge&logo=google-cloud&logoColor=white) |
-| **Preprocessing** | ![OpenCV](https://img.shields.io/badge/OpenCV-Image_Enhancement-red?style=for-the-badge&logo=opencv&logoColor=white) ![Pillow](https://img.shields.io/badge/Pillow-Image_Handling-blue?style=for-the-badge&logo=python&logoColor=white) |
-| **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-Dark_Theme-black?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Styling-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) |
-| **Deployment** | ![Docker](https://img.shields.io/badge/Docker-Containerization-blue?style=for-the-badge&logo=docker&logoColor=white) |
-
+  <table>
+    <tr>
+      <td><strong>Home Page</strong></td>
+      <td><strong>Features Page</strong></td>
+    </tr>
+    <tr>
+      <td><img src="frontend/public/screenshot/Home.png" alt="Home Page" width="400"/></td>
+      <td><img src="frontend/public/screenshot/Features.png" alt="Features Page" width="400"/></td>
+    </tr>
+    <tr>
+      <td><strong>About Page</strong></td>
+      <td><strong>Text Extraction Result</strong></td>
+    </tr>
+    <tr>
+      <td><img src="frontend/public/screenshot/About.png" alt="About Page" width="400"/></td>
+      <td><img src="frontend/public/image.png" alt="Extraction Demo" width="400"/></td>
+    </tr>
+  </table>
 </div>
 
-## 🚀 Installation & Setup
+<hr />
 
-### 1. Clone the Repository
+## 🚦 Getting Started
+
+### Prerequisites
+- Docker and Docker Compose
+- Node.js (v16+) for local development
+- Python (3.9+) for local development
+
+### Using Docker (Recommended)
+
 ```bash
-# Get the code
+# Clone the repository
 git clone https://github.com/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-.git
-cd OCR-System---Image-to-Text-Generator-
+cd image-to-text-generator
+
+# Start the application with Docker Compose
+docker-compose up --build
 ```
 
-### 2. Backend Setup
+The application will be available at:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8000
+- API Documentation: http://localhost:8000/docs
+
+### Manual Setup
+
+#### Backend
 ```bash
 cd backend
+
+# Create a virtual environment
 python -m venv venv
-venv\Scripts\activate  # Windows
-# or source venv/bin/activate  # Linux/Mac
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
+# Install dependencies
 pip install -r requirements.txt
+
+# Start the server
+python -m app.main
 ```
 
-### 3. Configure Google Vision API
-1. Create a project on Google Cloud Platform (GCP)
-2. Enable Vision API
-3. Download JSON credentials file
-4. Set environment variable:
-```bash
-# Windows (PowerShell)
-$env:GOOGLE_APPLICATION_CREDENTIALS="path\to\credentials.json"
-
-# Linux/Mac
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/credentials.json"
-```
-
-### 4. Start the Backend
-```bash
-cd backend
-uvicorn app.main:app --reload
-```
-
-### 5. Frontend Setup
+#### Frontend
 ```bash
 cd frontend
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
+<hr />
+
+## 📁 Project Structure
+
+```
+image-to-text-generator/
+├── backend/                # FastAPI backend
+│   ├── app/
+│   │   ├── api/            # API endpoints
+│   │   ├── core/           # Core configurations
+│   │   ├── models/         # Data models and schemas
+│   │   └── services/       # Business logic services
+│   ├── Dockerfile          # Backend Docker configuration
+│   └── requirements.txt    # Python dependencies
+├── frontend/               # Next.js frontend
+│   ├── public/             # Static assets
+│   ├── src/
+│   │   ├── app/            # Next.js App Router
+│   │   └── components/     # React components
+│   ├── Dockerfile          # Frontend Docker configuration
+│   └── package.json        # Node.js dependencies
+└── docker-compose.yml      # Docker Compose configuration
+```
+
+<hr />
+
 ## 🔌 API Endpoints
 
-### 📡 POST /api/extract
-Extract text from an uploaded image with high accuracy.
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/health` | GET | Check API health status |
+| `/api/extract` | POST | Extract text from an image |
+| `/api/batch-extract` | POST | Extract text from multiple images (batch processing) |
+| `/api/supported-languages` | GET | Get list of supported languages for OCR |
 
-**Request:**
-```json
-{
-  "file": "document.png",
-  "language": "en",
-  "enhance_image": true,
-  "structured_output": false
-}
-```
+For detailed API documentation, visit `/docs` when the server is running.
 
-**Response:**
-```json
-{
-  "text": "Invoice Number: 12345\nDate: 2025-08-20\nAmount: $250",
-  "confidence": 0.98,
-  "language": "en",
-  "engine_used": "Google Vision API",
-  "structured_data": {
-    "key_value_pairs": {
-      "Invoice Number": "12345",
-      "Date": "2025-08-20",
-      "Amount": "$250"
-    }
-  },
-  "processing_time": 0.542,
-  "word_count": 6
-}
-```
+<hr />
 
-## 📝 License
+## ⚙️ Configuration
 
-MIT License – Free to use and modify.
+### Environment Variables
 
----
+#### Backend
+- `APP_NAME`: Application name
+- `APP_VERSION`: Application version
+- `CORS_ORIGINS`: Allowed CORS origins
+- `MAX_UPLOAD_SIZE`: Maximum upload file size in bytes
+- `UPLOAD_DIR`: Directory for uploaded files
+
+#### Frontend
+- `NEXT_PUBLIC_API_URL`: Backend API URL
+
+<hr />
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+<hr />
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+<hr />
 
 <div align="center">
-
-### 🌟 Star this repository if you find it useful! 🌟
-
-![Made with ❤️](https://img.shields.io/badge/Made_with-❤️-red?style=for-the-badge)
-![Last Updated](https://img.shields.io/badge/Last_Updated-August_2025-blue?style=for-the-badge)
-
+  <p>
+    <a href="https://github.com/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-">
+      <img src="https://img.shields.io/github/stars/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-?style=social" alt="GitHub stars" />
+    </a>
+    &nbsp;
+    <a href="https://github.com/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-/issues">
+      <img src="https://img.shields.io/github/issues/vaibhavchauhan-15/OCR-System---Image-to-Text-Generator-?style=social" alt="GitHub issues" />
+    </a>
+  </p>
+  <p>
+    <strong>Built with ❤️ by <a href="https://github.com/vaibhavchauhan-15">Vaibhav Chauhan</a></strong>
+  </p>
+  
+  <a href="#-image-to-text-generator">Back to top ⬆️</a>
 </div>
