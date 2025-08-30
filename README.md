@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="frontend/public/image.png" alt="OCR System Logo" width="200"/>
-  <br/>
+  <br/> 
   <p><i>Transform any image into editable and searchable text with advanced OCR technology</i></p>
   <br/>
 
